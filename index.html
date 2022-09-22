@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Audio test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+   <audio id="rabbitMusic1" preload="auto" style="display: none">  <source src="9527.mp3" type="audio/mp3"> </audio>
+
+   <audio id="rabbitMusic2" preload="auto" style="display: none">  <source src="14028.mp3" type="audio/mp3"> </audio>
+
+	<button id="startButton1">兔子音乐</button>
+	<button id="startButton2">背景音乐</button>
+	<script>
+		const startButton1= document.getElementById('startButton1')
+	    const startButton2= document.getElementById('startButton2')
+		
+		startButton1.addEventListener('click',function(){
+			const audioElement = document.getElementById('rabbitMusic1');
+			audioElement.load();
+            audioElement.play();
+		})
+		
+			
+		startButton2.addEventListener('click',function(){
+			const audioElement = document.getElementById('rabbitMusic2');
+			audioElement.load();
+            audioElement.play();
+		})
+	</script>
+</body>
+</html>
